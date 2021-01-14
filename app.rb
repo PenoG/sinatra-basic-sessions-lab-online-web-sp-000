@@ -10,6 +10,7 @@ class App < Sinatra::Base
   @session = session
   session_secret = "password"
   
+  session[:item] = params[:item]
   
   erb :checkout
   end
